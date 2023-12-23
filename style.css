@@ -33,7 +33,10 @@ h5.card-title {
 .filterText {
   font-size: 1.25rem;
 }
-.sia {
+/* .sia {
+  width: 101%;
+} */
+.widthDropDown {
   width: 101%;
 }
 .custom-box-shadow {
@@ -41,14 +44,11 @@ h5.card-title {
   /* Customize the shadow values */
 }
 @media (max-width: 798px) {
-  * {
-    overflow-x: hidden;
-  }
-  .sia {
-    width: 70%;
-  }
+  /* .sia {
+    width: 150%;
+  } */
   .search {
-    width: 100%;
+    width: auto;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 2rem;
@@ -60,5 +60,15 @@ h5.card-title {
     font-size: 1.3rem;
     margin-left: 10px;
     margin-bottom: -7px;
+  }
+  .widthDropDown {
+    width: 75%;
+  }
+  .countries {
+    position: relative;
+    z-index: -1;
+  }
+  ul.widthDropDown {
+    z-index: 1;
   }
 }
