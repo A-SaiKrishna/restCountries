@@ -1,0 +1,64 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
+.heading {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.darkButton {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 440;
+}
+.search {
+  width: 35%;
+}
+.search1 {
+  height: 4.5rem;
+  /* background-color: aqua; */
+}
+.filters {
+  font-size: 3rem;
+}
+div.filters::hover {
+  border: none;
+}
+h5.card-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.searchbar {
+  font-size: 120%;
+}
+.filterText {
+  font-size: 1.25rem;
+}
+.sia {
+  width: 101%;
+}
+.custom-box-shadow {
+  box-shadow: 5px 5px 15px black;
+  /* Customize the shadow values */
+}
+@media (max-width: 798px) {
+  * {
+    overflow-x: hidden;
+  }
+  .sia {
+    width: 70%;
+  }
+  .search {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 2rem;
+  }
+  .filters {
+    margin-left: 20px;
+  }
+  .heading {
+    font-size: 1.3rem;
+    margin-left: 10px;
+    margin-bottom: -7px;
+  }
+}
