@@ -63,10 +63,9 @@ h5.card-title {
   }
   .widthDropDown {
     width: 75%;
-  }
-  .countries {
-    position: relative;
-    z-index: -1;
+  .eachCard {
+    margin: auto;
+    background-color: aquamarine;
   }
   ul.widthDropDown {
     z-index: 1;

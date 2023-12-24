@@ -47,12 +47,13 @@ function creatingCard(data) {
     container.removeChild(container.childNodes[0]);
   }
   let row = document.createElement("div");
-  row.className = "countryData d-flex flex-wrap  ms-md-5 me-3";
+  row.className =
+    "countryData d-flex flex-wrap  ms-md-5 me-md-3 justify-content-center";
   container.appendChild(row);
   for (let index = 0; index < data.length; index++) {
     let eachContainer = document.createElement("div");
     eachContainer.className =
-      " col-xl-3 col-lg-6  col-md-12 pe-md-5 ps-5 border-0 my-5";
+      " col-xl-3 col-lg-6  col-md-12 pe-md-5 ps-md-5 border-0 my-5 eachCard ";
     let outerDiv = document.createElement("div");
     outerDiv.className = "card eachcard ";
     let img = document.createElement("img");
