@@ -184,8 +184,15 @@ darkButton.addEventListener("click", (data) => {
     //   "hsl(209, 23%, 22%)";
     // eachCard[0].childNodes[0].childNodes[1].childNodes[1].childNodes[0].style.backgroundColor =
     //   "hsl(209, 23%, 22%)";
-    let eachCard = document.querySelector(".eachCard");
-    console.log(eachCard.childNodes.childNodes);
+    let eachCard = document.querySelectorAll(".card.eachCard");
+    console.log(eachCard[0]);
+    for (let index1 = 0; index1 < eachCard.length; index1++) {
+      let innerEachCard = eachCard[index1].querySelectorAll("*");
+      // console.log(innerEachCard);
+      for (let index = 0; index < innerEachCard.length; index++) {
+        innerEachCard[index].style.backgroundColor = "hsl(209, 23%, 22%)";
+      }
+    }
     // let eachCardElements = eachCard[0].querySelectorAll("*");
     // console.log(eachCardElements);
 
