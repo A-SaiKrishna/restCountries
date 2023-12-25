@@ -115,6 +115,17 @@ async function main() {
       //   console.log(country);
       let filterCountry = filterByCountry(data, country);
       creatingCard(filterCountry);
+      for (let index = 0; index < dropDown.length; index++) {
+        dropDown[index].addEventListener("click", () => {
+          let region = dropDown[index].innerHTML;
+          let regionData = filterCountry.filter((obj) => {
+            return (
+              obj.region.trim().toLowerCase() === region.trim().toLowerCase()
+            );
+          });
+          creatingCard(regionData);
+        });
+      }
     });
     //   console.log(dropDown);
     for (let index = 0; index < dropDown.length; index++) {
@@ -127,6 +138,11 @@ async function main() {
           );
         });
         creatingCard(regionData);
+        input[0].addEventListener("keyup", (data1) => {
+          let country = data1.target.value;
+          let filterCountry = filterByCountry(regionData, country);
+          creatingCard(filterCountry);
+        });
       });
     }
   } catch (e) {
