@@ -158,8 +158,14 @@ darkButton.addEventListener("click", (data) => {
     let headers = document.getElementsByTagName("header");
     headers[0].style.backgroundColor = "hsl(209, 23%, 22%)";
     let headersContainers = document.querySelector("header nav");
-    console.log(headersContainers);
+    // console.log(headersContainers);
     headersContainers.style.backgroundColor = "hsl(209, 23%, 22%)";
+    headersContainers.childNodes[1].style.backgroundColor =
+      "hsl(209, 23%, 22%)";
+    headersContainers.childNodes[3].style.backgroundColor =
+      "hsl(209, 23%, 22%)";
+
+    console.log(headersContainers.childNodes);
     darkMode = 1;
   } else {
     darkMode = 0;
