@@ -148,7 +148,7 @@ let darkMode = 0;
 let darkButton = document.querySelector(".darkButton");
 darkButton.addEventListener("click", (data) => {
   let allElements = document.getElementsByTagName("*");
-  console.log(allElements);
+  // console.log(allElements);
   if (darkMode === 0) {
     for (let index = 0; index < allElements.length; index++) {
       allElements[index].style.backgroundColor = "hsl(207, 26%, 17%)";
@@ -164,8 +164,31 @@ darkButton.addEventListener("click", (data) => {
       "hsl(209, 23%, 22%)";
     headersContainers.childNodes[3].style.backgroundColor =
       "hsl(209, 23%, 22%)";
+    let searchSymbol = document.getElementsByClassName("custom-box-shadow");
+    // console.log(searchSymbol[0].childNodes[1]);
 
-    console.log(headersContainers.childNodes);
+    searchSymbol[0].childNodes[1].childNodes[1].style.backgroundColor =
+      "hsl(209, 23%, 22%)";
+    searchSymbol[0].childNodes[1].childNodes[3].style.backgroundColor =
+      "hsl(209, 23%, 22%)";
+    searchSymbol[0].childNodes[1].style.backgroundColor = "hsl(209, 23%, 22%)";
+    let filters = document.getElementsByClassName("filters");
+    // searchSymbol.style.backgroundColor = "hsl(209, 23%, 22%)";
+    // console.log(filters[0]);
+    filters[0].childNodes[1].style.backgroundColor = "hsl(209, 23%, 22%)";
+    // let eachCard = document.getElementsByClassName("eachCard");
+    // console.log(eachCard[0].childNodes[0].childNodes[1].childNodes[1]);
+    // eachCard[0].childNodes[0].childNodes[1].style.backgroundColor =
+    //   "hsl(209, 23%, 22%)";
+    // eachCard[0].childNodes[0].childNodes[1].childNodes[0].style.backgroundColor =
+    //   "hsl(209, 23%, 22%)";
+    // eachCard[0].childNodes[0].childNodes[1].childNodes[1].childNodes[0].style.backgroundColor =
+    //   "hsl(209, 23%, 22%)";
+    let eachCard = document.querySelector(".eachCard");
+    console.log(eachCard.childNodes.childNodes);
+    // let eachCardElements = eachCard[0].querySelectorAll("*");
+    // console.log(eachCardElements);
+
     darkMode = 1;
   } else {
     darkMode = 0;

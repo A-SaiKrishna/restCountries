@@ -83,6 +83,6 @@ h5.card-title {
   }
   .eachCard {
     margin: auto;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
   }
 }
