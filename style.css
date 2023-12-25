@@ -1,6 +1,23 @@
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --very-blue-text: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
 * {
   font-family: "Nunito Sans", sans-serif;
+  color: var(--very-blue-text);
+  background-color: var(--very-light-gray);
 }
+/* div#borderRadiForCard.card.eachCard {
+  border-radius: 2rem;
+  background-color: aquamarine;
+} */
+ul.widthDropDown {
+  z-index: 1;
+}
+
 .heading {
   font-size: 1.75rem;
   font-weight: bold;
@@ -63,11 +80,9 @@ h5.card-title {
   }
   .widthDropDown {
     width: 75%;
+  }
   .eachCard {
     margin: auto;
     background-color: aquamarine;
-  }
-  ul.widthDropDown {
-    z-index: 1;
   }
 }

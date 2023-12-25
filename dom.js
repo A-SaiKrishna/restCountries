@@ -56,11 +56,13 @@ function creatingCard(data) {
       " col-xl-3 col-lg-6  col-md-12 pe-md-5 ps-md-5 border-0 my-5 eachCard ";
     let outerDiv = document.createElement("div");
     outerDiv.className = "card eachcard ";
+    outerDiv.id = "borderRadiForCard";
     let img = document.createElement("img");
+    img.className = "rounded-2";
     img.setAttribute("src", data[index].flags.png);
-    outerDiv.style.width = "24em";
+    outerDiv.style.width = "24rem";
     let bodyDiv = document.createElement("div");
-    bodyDiv.className = "card-body";
+    bodyDiv.className = "card-body rounded-2";
     let h5 = document.createElement("h5");
     h5.className = "card-title ms-3 my-3";
     let ul = document.createElement("ul");
@@ -138,3 +140,32 @@ async function main() {
 main();
 
 // fetchingCountries().then(creatingCard);
+
+/***
+ * dark mode implementation using dom
+ */
+let darkMode = 0;
+let darkButton = document.querySelector(".darkButton");
+darkButton.addEventListener("click", (data) => {
+  let allElements = document.getElementsByTagName("*");
+  console.log(allElements);
+  if (darkMode === 0) {
+    for (let index = 0; index < allElements.length; index++) {
+      allElements[index].style.backgroundColor = "hsl(207, 26%, 17%)";
+      allElements[index].style.color = "white";
+    }
+
+    let headers = document.getElementsByTagName("header");
+    headers[0].style.backgroundColor = "hsl(209, 23%, 22%)";
+    let headersContainers = document.querySelector("header nav");
+    console.log(headersContainers);
+    headersContainers.style.backgroundColor = "hsl(209, 23%, 22%)";
+    darkMode = 1;
+  } else {
+    darkMode = 0;
+    for (let index = 0; index < allElements.length; index++) {
+      allElements[index].style.backgroundColor = " hsl(0, 0%, 98%)";
+      allElements[index].style.color = "hsl(200, 15%, 8%)";
+    }
+  }
+});
